@@ -22,7 +22,9 @@
   padding: 0;
 }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -36,27 +38,45 @@ header {
   color: white;
   padding: 18px 7%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
   gap: 15px;
 }
 
-.logo { font-size: 1.4rem; font-weight: bold; }
-.logo span { color: var(--dourado); }
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
 
-nav { display: flex; gap: 18px; flex-wrap: wrap; }
-nav a { color: white; text-decoration: none; font-weight: bold; }
-nav a:hover { color: var(--dourado); }
+.logo span {
+  color: var(--dourado);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: var(--dourado);
+}
 
 .hero {
-  padding: 70px 7%;
+  padding: 65px 7%;
   background: linear-gradient(135deg, var(--vinho), var(--vinho-escuro));
   color: white;
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 30px;
+  grid-template-columns: 1.4fr 1fr;
   align-items: center;
+  gap: 30px;
 }
 
 .hero h1 {
@@ -65,9 +85,19 @@ nav a:hover { color: var(--dourado); }
   margin-bottom: 18px;
 }
 
-.hero h1 span { color: var(--dourado); }
-.hero p { margin-bottom: 25px; font-size: 1.1rem; }
-.hero-art { font-size: 8rem; text-align: center; }
+.hero h1 span {
+  color: var(--dourado);
+}
+
+.hero p {
+  margin-bottom: 25px;
+  font-size: 1.1rem;
+}
+
+.hero-art {
+  font-size: 8rem;
+  text-align: center;
+}
 
 .btn {
   display: inline-block;
@@ -76,33 +106,47 @@ nav a:hover { color: var(--dourado); }
   border: none;
   border-radius: 30px;
   padding: 12px 22px;
+  font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1rem;
 }
 
-.btn:hover { opacity: .85; }
+.btn:hover {
+  opacity: .85;
+}
 
-section { padding: 55px 7%; }
+section {
+  padding: 55px 7%;
+}
 
-.titulo-secao { text-align: center; margin-bottom: 30px; }
-.titulo-secao h2 { color: var(--vinho); font-size: 2rem; }
-.titulo-secao p { margin-top: 8px; }
+.titulo-secao {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.titulo-secao h2 {
+  color: var(--vinho);
+  font-size: 2rem;
+}
+
+.titulo-secao p {
+  margin-top: 8px;
+}
 
 .painel {
   display: flex;
   justify-content: center;
   gap: 15px;
   flex-wrap: wrap;
-  margin-bottom: 35px;
+  margin-bottom: 32px;
 }
 
 .estatistica {
   background: white;
   border: 2px solid var(--bege);
   border-radius: 15px;
-  padding: 15px 28px;
+  padding: 15px 25px;
   text-align: center;
   min-width: 130px;
 }
@@ -123,24 +167,39 @@ section { padding: 55px 7%; }
   background: white;
   border: 1px solid var(--bege);
   border-radius: 20px;
-  padding: 24px;
+  padding: 23px;
   box-shadow: 0 6px 18px #0000000b;
 }
 
-.jogo-icone { font-size: 2.5rem; }
-.jogo h3 { color: var(--vinho); margin: 8px 0; }
-.jogo > p { margin-bottom: 15px; }
+.jogo-icone {
+  font-size: 2.5rem;
+}
+
+.jogo h3 {
+  color: var(--vinho);
+  margin: 8px 0;
+}
+
+.jogo > p {
+  margin-bottom: 15px;
+}
 
 .area-jogo {
   background: var(--creme);
   border-radius: 12px;
-  padding: 17px;
-  margin-top: 15px;
+  padding: 16px;
+  margin-top: 14px;
 }
 
-.pergunta { font-weight: bold; margin-bottom: 12px; }
+.pergunta {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
 
-.opcoes { display: grid; gap: 9px; }
+.opcoes {
+  display: grid;
+  gap: 9px;
+}
 
 .opcao {
   background: white;
@@ -153,36 +212,177 @@ section { padding: 55px 7%; }
   font-size: .95rem;
 }
 
-.opcao:hover:not(:disabled) { border-color: var(--dourado); }
-.opcao:disabled { cursor: default; }
-.opcao.correta { background: #e1f2df; border-color: var(--verde); }
-.opcao.errada { background: #f8e0e0; border-color: var(--vinho); }
+.opcao:disabled {
+  cursor: default;
+}
 
-.feedback { margin-top: 12px; min-height: 25px; font-weight: bold; }
-.sucesso { color: var(--verde); }
-.erro { color: var(--vinho); }
+.opcao.correta {
+  background: #e1f2df;
+  border-color: var(--verde);
+}
 
-.controles { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 15px; }
-.controles .btn { padding: 10px 16px; font-size: .9rem; }
+.opcao.errada {
+  background: #f8e0e0;
+  border-color: var(--vinho);
+}
 
-.sobre { background: var(--bege); text-align: center; }
-.sobre h2 { color: var(--vinho); margin-bottom: 12px; }
-.sobre p { max-width: 750px; margin: auto; }
+.feedback {
+  margin-top: 12px;
+  min-height: 24px;
+  font-weight: bold;
+}
+
+.sucesso {
+  color: var(--verde);
+}
+
+.erro {
+  color: var(--vinho);
+}
+
+.controles {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.controles .btn {
+  padding: 10px 15px;
+  font-size: .9rem;
+}
+
+.roleta-secao {
+  background: var(--bege);
+}
+
+.roleta-card {
+  max-width: 620px;
+  margin: auto;
+  padding: 28px 20px;
+  text-align: center;
+  background: white;
+  border: 2px solid var(--dourado);
+  border-radius: 24px;
+}
+
+.roleta-seta {
+  color: var(--vinho);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.roleta-circulo {
+  width: 190px;
+  height: 190px;
+  max-width: 65vw;
+  max-height: 65vw;
+  margin: 12px auto 22px;
+  border: 7px solid white;
+  outline: 3px solid var(--dourado);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: 3.5rem;
+  background: conic-gradient(
+    #7b1e2b 0deg 45deg,
+    #d6a84f 45deg 90deg,
+    #47784a 90deg 135deg,
+    #9b5d38 135deg 180deg,
+    #b94c60 180deg 225deg,
+    #e5c982 225deg 270deg,
+    #47784a 270deg 315deg,
+    #7b1e2b 315deg 360deg
+  );
+  transition: transform 2s cubic-bezier(.15,.7,.15,1);
+}
+
+.roleta-card h3 {
+  color: var(--vinho);
+  font-size: 1.4rem;
+  margin: 15px 0 8px;
+}
+
+#desafio-texto {
+  margin-bottom: 15px;
+}
+
+#desafio-feedback {
+  margin-top: 12px;
+  min-height: 24px;
+  color: var(--verde);
+  font-weight: bold;
+}
+
+.btn-concluir {
+  display: block;
+  margin: 12px auto;
+  background: var(--verde);
+  color: white;
+}
+
+.btn-concluir[hidden] {
+  display: none !important;
+}
+
+.roleta-pontos {
+  font-size: .9rem;
+  margin-top: 18px;
+}
+
+.sobre {
+  text-align: center;
+}
+
+.sobre h2 {
+  color: var(--vinho);
+  margin-bottom: 12px;
+}
+
+.sobre p {
+  max-width: 750px;
+  margin: auto;
+}
 
 footer {
   background: var(--vinho-escuro);
   color: white;
   text-align: center;
-  padding: 25px;
+  padding: 28px 7%;
+}
+
+footer p + p {
+  color: var(--dourado);
+  margin-top: 5px;
 }
 
 @media (max-width: 750px) {
-  .hero { grid-template-columns: 1fr; text-align: center; padding: 50px 6%; }
-  .hero-art { font-size: 5rem; }
-  .jogos { grid-template-columns: 1fr; }
-  header { justify-content: center; text-align: center; }
-  nav { justify-content: center; }
-  section { padding: 42px 6%; }
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    padding: 45px 6%;
+  }
+
+  .hero-art {
+    font-size: 5rem;
+  }
+
+  .jogos {
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    padding: 42px 6%;
+  }
 }
 </style>
 </head>
@@ -194,18 +394,17 @@ footer {
   <nav>
     <a href="#inicio">Início</a>
     <a href="#jogos">Jogos</a>
+    <a href="#roleta-desafios">Roleta</a>
     <a href="#sobre">Sobre</a>
   </nav>
 </header>
 
 <main>
+
 <section class="hero" id="inicio">
   <div>
     <h1>Aprender a cuidar do planeta pode ser <span>divertido!</span></h1>
-    <p>
-      Teste seus conhecimentos, participe dos desafios e descubra
-      como pequenas atitudes podem transformar o mundo.
-    </p>
+    <p>Teste seus conhecimentos, jogue e descubra como pequenas atitudes podem transformar o mundo.</p>
     <a class="btn" href="#jogos">🎮 Começar a jogar</a>
   </div>
   <div class="hero-art">🌎</div>
@@ -213,8 +412,8 @@ footer {
 
 <section id="jogos">
   <div class="titulo-secao">
-    <h2>🎮 Nossos jogos</h2>
-    <p>Aprenda sobre sustentabilidade brincando!</p>
+    <h2>🎮 Jogos sustentáveis</h2>
+    <p>Aprenda sobre o meio ambiente brincando!</p>
   </div>
 
   <div class="painel">
@@ -236,12 +435,12 @@ footer {
 
     <article class="jogo">
       <div class="jogo-icone">🌳</div>
-      <h3>1. Quiz Sustentável</h3>
-      <p>Responda às perguntas e teste seus conhecimentos sobre o meio ambiente.</p>
+      <h3>1. Quiz sustentável</h3>
+      <p>Escolha a resposta correta e teste seus conhecimentos.</p>
       <div class="area-jogo">
         <div class="pergunta" id="quiz-pergunta"></div>
         <div class="opcoes" id="quiz-opcoes"></div>
-        <div class="feedback" id="quiz-feedback" aria-live="polite"></div>
+        <div class="feedback" id="quiz-feedback"></div>
         <div class="controles">
           <button class="btn" onclick="proximaPergunta()">Próxima pergunta</button>
         </div>
@@ -251,11 +450,11 @@ footer {
     <article class="jogo">
       <div class="jogo-icone">♻️</div>
       <h3>2. Para onde vai?</h3>
-      <p>Descubra qual é o destino correto de cada tipo de resíduo.</p>
+      <p>Descubra o destino adequado de cada resíduo.</p>
       <div class="area-jogo">
         <div class="pergunta" id="lixo-pergunta"></div>
         <div class="opcoes" id="lixo-opcoes"></div>
-        <div class="feedback" id="lixo-feedback" aria-live="polite"></div>
+        <div class="feedback" id="lixo-feedback"></div>
         <div class="controles">
           <button class="btn" onclick="proximoLixo()">Próximo resíduo</button>
         </div>
@@ -265,14 +464,14 @@ footer {
     <article class="jogo">
       <div class="jogo-icone">✅</div>
       <h3>3. Verdadeiro ou falso?</h3>
-      <p>Será que você consegue identificar os fatos sobre sustentabilidade?</p>
+      <p>Descubra se as afirmações sobre sustentabilidade são verdadeiras.</p>
       <div class="area-jogo">
         <div class="pergunta" id="vf-pergunta"></div>
-        <div class="opcoes">
+        <div class="opcoes" id="vf-opcoes">
           <button class="opcao" onclick="responderVF(true)">Verdadeiro</button>
           <button class="opcao" onclick="responderVF(false)">Falso</button>
         </div>
-        <div class="feedback" id="vf-feedback" aria-live="polite"></div>
+        <div class="feedback" id="vf-feedback"></div>
         <div class="controles">
           <button class="btn" onclick="proximoVF()">Próxima afirmação</button>
         </div>
@@ -282,11 +481,11 @@ footer {
     <article class="jogo">
       <div class="jogo-icone">💡</div>
       <h3>4. Adivinhe a solução</h3>
-      <p>Leia a dica e descubra qual atitude sustentável ela descreve.</p>
+      <p>Leia a dica e escolha a atitude sustentável correta.</p>
       <div class="area-jogo">
         <div class="pergunta" id="adivinha-pergunta"></div>
         <div class="opcoes" id="adivinha-opcoes"></div>
-        <div class="feedback" id="adivinha-feedback" aria-live="polite"></div>
+        <div class="feedback" id="adivinha-feedback"></div>
         <div class="controles">
           <button class="btn" onclick="proximaAdivinha()">Nova dica</button>
         </div>
@@ -294,325 +493,254 @@ footer {
     </article>
 
   </div>
-
-  <div style="text-align:center;margin-top:30px">
-    <button class="btn" onclick="reiniciar()">🔄 Zerar pontuação</button>
-  </div>
 </section>
+<!-- ==================== ROLETA DE DESAFIOS ==================== -->
+<section class="roleta-secao" id="roleta-desafios">
+  <h2>🎡 Roleta dos Desafios Sustentáveis</h2>
+  <p>Gire a roleta, descubra seu desafio ecológico e ganhe pontos!</p>
 
-<section class="sobre" id="sobre">
-  <h2>🌎 Sustentabilidade ao Seu Alcance</h2>
-  <p>
-    A sustentabilidade começa com pequenas atitudes. Economizar água,
-    reduzir o desperdício, reutilizar materiais e separar os resíduos
-    são ações que ajudam a cuidar do planeta.
-    Aprenda, jogue e compartilhe boas ideias!
+  <div class="roleta-container">
+    <div class="seta-roleta">▼</div>
+
+    <div class="roleta" id="roleta-circulo">
+      <div class="roleta-centro">🌎</div>
+    </div>
+  </div>
+
+  <p id="texto-desafio" aria-live="polite">
+    Clique no botão para sortear seu desafio!
+  </p>
+
+  <button id="botao-girar" onclick="girarRoleta()">
+    🎡 Girar a roleta
+  </button>
+
+  <button
+    id="botao-concluir"
+    onclick="concluirDesafio()"
+    style="display:none;"
+  >
+    ✅ Concluí meu desafio! +10 pontos
+  </button>
+
+  <p class="pontos-roleta">
+    ⭐ Cada desafio concluído vale 10 pontos!
   </p>
 </section>
+
+<!-- ==================== SOBRE O ECOGAMES ==================== -->
+<section class="sobre" id="sobre">
+  <h2>🌱 Sobre o EcoGames</h2>
+
+  <p>
+    O EcoGames transforma o aprendizado sobre sustentabilidade em
+    diversão. Aqui, você pode testar seus conhecimentos, descobrir
+    atitudes sustentáveis e realizar desafios que ajudam o planeta.
+  </p>
+
+  <p>
+    Pequenas atitudes fazem diferença: economizar água, separar o lixo,
+    reutilizar materiais e cuidar da natureza.
+  </p>
+
+  <h3>💚 Sua missão</h3>
+  <p>
+    Aprenda, jogue e transforme suas atitudes em ações positivas
+    para o meio ambiente!
+  </p>
+</section>
+
 </main>
 
+<!-- ==================== RODAPÉ — FICA NO FINAL ==================== -->
 <footer>
   <p>🌱 EcoGames — Aprender hoje para transformar o amanhã.</p>
   <p>PROJETEC · CTA</p>
 </footer>
 
+<!-- ==================== JAVASCRIPT DOS JOGOS ==================== -->
 <script>
-let pontos = 0;
-let acertos = 0;
-let jogados = 0;
+/*
+  Este código conecta os jogos à página.
+  Ele também controla a pontuação e a roleta.
+*/
 
-function atualizarPainel() {
-  document.getElementById("pontos").textContent = pontos;
-  document.getElementById("acertos").textContent = acertos;
-  document.getElementById("jogados").textContent = jogados;
+let pontos = 0;
+let desafioAtual = null;
+let roletaGirando = false;
+let rotacaoRoleta = 0;
+
+const desafios = [
+  "💧 Economize água durante o banho.",
+  "♻️ Separe corretamente os materiais recicláveis.",
+  "💡 Apague as luzes que não estiver usando.",
+  "🌳 Cuide de uma planta ou árvore.",
+  "🛍️ Reutilize uma sacola em vez de pegar outra.",
+  "🚰 Feche a torneira enquanto escova os dentes.",
+  "🧴 Reutilize um recipiente que ainda esteja em boas condições.",
+  "🚶 Se for seguro e possível, caminhe em um trajeto curto.",
+  "🍃 Recolha um resíduo do chão usando proteção adequada.",
+  "📚 Converse com alguém sobre uma atitude sustentável.",
+  "🔌 Desligue aparelhos que não estão sendo utilizados.",
+  "🥕 Evite desperdiçar alimentos em uma refeição."
+];
+
+const coresRoleta = [
+  "#8fbc8f",
+  "#e8c46a",
+  "#b8d8be",
+  "#f0d9a0",
+  "#6fa77b",
+  "#f5e6bd",
+  "#9ac7a5",
+  "#d8b65c",
+  "#7fb58a",
+  "#e8cf8a",
+  "#a8d5ad",
+  "#d4b46a"
+];
+
+/* Cria as divisões coloridas da roleta */
+function prepararRoleta() {
+  const roleta = document.getElementById("roleta-circulo");
+
+  if (!roleta) return;
+
+  const fatias = desafios.map((desafio, indice) => {
+    const inicio = indice * 30;
+    const fim = inicio + 30;
+
+    return `${coresRoleta[indice]} ${inicio}deg ${fim}deg`;
+  });
+
+  roleta.style.background =
+    `conic-gradient(${fatias.join(",")})`;
 }
 
-function registrarResposta(correta, feedbackId) {
-  jogados++;
-  const feedback = document.getElementById(feedbackId);
+/* Gira a roleta e sorteia um desafio */
+function girarRoleta() {
+  if (roletaGirando) return;
 
-  if (correta) {
-    pontos += 10;
-    acertos++;
-    feedback.textContent = "🎉 Muito bem! Resposta correta! +10 pontos";
-    feedback.className = "feedback sucesso";
-  } else {
-    feedback.textContent = "💡 Não foi dessa vez! Tente a próxima.";
-    feedback.className = "feedback erro";
-  }
+  roletaGirando = true;
+  desafioAtual = null;
+
+  const botaoGirar = document.getElementById("botao-girar");
+  const botaoConcluir = document.getElementById("botao-concluir");
+  const textoDesafio = document.getElementById("texto-desafio");
+  const roleta = document.getElementById("roleta-circulo");
+
+  botaoGirar.disabled = true;
+  botaoConcluir.style.display = "none";
+  textoDesafio.textContent = "🎡 A roleta está girando...";
+
+  const sorteado = Math.floor(Math.random() * desafios.length);
+
+  const voltasExtras = 360 * (5 + Math.floor(Math.random() * 3));
+  const centroDaFatia = sorteado * 30 + 15;
+
+  /*
+    A seta fica no topo. A rotação final é calculada
+    para que a fatia sorteada fique apontada pela seta.
+  */
+  const giroFinal = (360 - centroDaFatia) % 360;
+
+  rotacaoRoleta += voltasExtras + giroFinal;
+  roleta.style.transform = `rotate(${rotacaoRoleta}deg)`;
+
+  setTimeout(() => {
+    desafioAtual = desafios[sorteado];
+
+    textoDesafio.textContent =
+      `🌿 Seu desafio: ${desafioAtual}`;
+
+    botaoGirar.disabled = false;
+    botaoGirar.textContent = "🎡 Girar novamente";
+    botaoConcluir.style.display = "inline-block";
+
+    roletaGirando = false;
+  }, 3500);
+}
+
+/* Premia a conclusão de um desafio */
+function concluirDesafio() {
+  if (!desafioAtual) return;
+
+  adicionarPontos(10);
+
+  document.getElementById("texto-desafio").textContent =
+    `🎉 Parabéns! Você concluiu: ${desafioAtual} (+10 pontos)`;
+
+  document.getElementById("botao-concluir").style.display = "none";
+
+  desafioAtual = null;
+}
+
+/* Atualiza a pontuação */
+function adicionarPontos(quantidade) {
+  pontos += quantidade;
+
+  const elementosPontos = document.querySelectorAll(
+    "#pontuacao, #pontos, .pontuacao"
+  );
+
+  elementosPontos.forEach(elemento => {
+    elemento.textContent = pontos;
+  });
 
   atualizarPainel();
 }
 
-const perguntasQuiz = [
-  {
-    pergunta: "Qual atitude ajuda a economizar água?",
-    opcoes: ["Deixar a torneira aberta", "Fechar a torneira ao escovar os dentes", "Lavar a calçada todos os dias"],
-    correta: 1
-  },
-  {
-    pergunta: "O que significa reutilizar?",
-    opcoes: ["Usar um objeto novamente", "Jogar tudo fora", "Comprar algo novo sempre"],
-    correta: 0
-  },
-  {
-    pergunta: "Qual destas fontes de energia é renovável?",
-    opcoes: ["Carvão mineral", "Petróleo", "Energia solar"],
-    correta: 2
-  },
-  {
-    pergunta: "Qual atitude reduz o uso de plástico descartável?",
-    opcoes: ["Usar sacola reutilizável", "Usar várias sacolas plásticas", "Jogar plástico na rua"],
-    correta: 0
-  },
-  {
-    pergunta: "Por que as árvores são importantes?",
-    opcoes: ["Porque produzem lixo", "Porque ajudam os ecossistemas e absorvem CO₂", "Porque desperdiçam água"],
-    correta: 1
-  }
-];
+/* Atualiza os contadores, se existirem na página */
+function atualizarPainel() {
+  const elementosPontos = document.querySelectorAll(
+    "#pontuacao, #pontos, .pontuacao"
+  );
 
-let quizAtual = 0;
-let quizRespondido = false;
-
-function mostrarQuiz() {
-  const q = perguntasQuiz[quizAtual % perguntasQuiz.length];
-  document.getElementById("quiz-pergunta").textContent = q.pergunta;
-  document.getElementById("quiz-feedback").textContent = "";
-  document.getElementById("quiz-feedback").className = "feedback";
-  quizRespondido = false;
-
-  const area = document.getElementById("quiz-opcoes");
-  area.innerHTML = "";
-
-  q.opcoes.forEach((opcao, i) => {
-    const botao = document.createElement("button");
-    botao.className = "opcao";
-    botao.textContent = opcao;
-
-    botao.onclick = () => {
-      if (quizRespondido) return;
-      quizRespondido = true;
-
-      area.querySelectorAll("button").forEach((b, indice) => {
-        b.disabled = true;
-        if (indice === q.correta) b.classList.add("correta");
-      });
-
-      if (i !== q.correta) botao.classList.add("errada");
-      registrarResposta(i === q.correta, "quiz-feedback");
-    };
-
-    area.appendChild(botao);
+  elementosPontos.forEach(elemento => {
+    elemento.textContent = pontos;
   });
 }
 
-function proximaPergunta() {
-  quizAtual++;
-  mostrarQuiz();
-}
-
-const lixos = [
-  { nome: "Jornal e papel limpo", opcoes: ["Reciclagem de papel", "Lixo orgânico", "Rejeito comum"], correta: 0 },
-  { nome: "Casca de banana", opcoes: ["Vidro", "Resíduo orgânico", "Metal"], correta: 1 },
-  { nome: "Garrafa de vidro", opcoes: ["Papel", "Reciclagem de vidro", "Orgânico"], correta: 1 },
-  { nome: "Lata de alumínio", opcoes: ["Reciclagem de metal", "Orgânico", "Papel"], correta: 0 },
-  { nome: "Pilha usada", opcoes: ["Lixo orgânico", "Coleta específica para pilhas", "Papel"], correta: 1 }
-];
-
-let lixoAtual = 0;
-let lixoRespondido = false;
-
-function mostrarLixo() {
-  const item = lixos[lixoAtual % lixos.length];
-  document.getElementById("lixo-pergunta").textContent = "Onde descartar: " + item.nome + "?";
-  document.getElementById("lixo-feedback").textContent = "";
-  document.getElementById("lixo-feedback").className = "feedback";
-  lixoRespondido = false;
-
-  const area = document.getElementById("lixo-opcoes");
-  area.innerHTML = "";
-
-  item.opcoes.forEach((opcao, i) => {
-    const botao = document.createElement("button");
-    botao.className = "opcao";
-    botao.textContent = opcao;
-
-    botao.onclick = () => {
-      if (lixoRespondido) return;
-      lixoRespondido = true;
-
-      area.querySelectorAll("button").forEach((b, indice) => {
-        b.disabled = true;
-        if (indice === item.correta) b.classList.add("correta");
-      });
-
-      if (i !== item.correta) botao.classList.add("errada");
-      registrarResposta(i === item.correta, "lixo-feedback");
-    };
-
-    area.appendChild(botao);
-  });
-}
-
-function proximoLixo() {
-  lixoAtual++;
-  mostrarLixo();
-}
-
-const afirmacoes = [
-  { texto: "Reciclar pode ajudar a reduzir a quantidade de resíduos enviados aos aterros.", correta: true },
-  { texto: "Deixar as luzes acesas em ambientes vazios economiza energia.", correta: false },
-  { texto: "Levar uma garrafa reutilizável pode diminuir o consumo de descartáveis.", correta: true },
-  { texto: "Todo tipo de resíduo pode ser jogado no mesmo recipiente.", correta: false },
-  { texto: "Economizar água é uma atitude sustentável.", correta: true }
-];
-
-let vfAtual = 0;
-let vfRespondido = false;
-
-function mostrarVF() {
-  document.getElementById("vf-pergunta").textContent =
-    afirmacoes[vfAtual % afirmacoes.length].texto;
-  document.getElementById("vf-feedback").textContent = "";
-  document.getElementById("vf-feedback").className = "feedback";
-  vfRespondido = false;
-  document.querySelectorAll("#vf-pergunta + .opcoes button").forEach(b => b.disabled = false);
-}
-
-function responderVF(resposta) {
-  if (vfRespondido) return;
-  vfRespondido = true;
-  const correta = afirmacoes[vfAtual % afirmacoes.length].correta === resposta;
-  document.querySelectorAll("#vf-pergunta + .opcoes button").forEach(b => b.disabled = true);
-  registrarResposta(correta, "vf-feedback");
-}
-
-function proximoVF() {
-  vfAtual++;
-  mostrarVF();
-}
-
-const adivinhas = [
-  {
-    dica: "Sou uma fonte de energia que vem da luz do Sol. Quem sou eu?",
-    opcoes: ["Energia solar", "Carvão", "Gasolina"],
-    correta: 0
-  },
-  {
-    dica: "Posso ser usado várias vezes e ajudo a reduzir descartáveis. O que sou?",
-    opcoes: ["Copo descartável", "Sacola reutilizável", "Embalagem de uso único"],
-    correta: 1
-  },
-  {
-    dica: "Transformo restos de alimentos em material útil para o solo. O que sou?",
-    opcoes: ["Compostagem", "Desperdício", "Queimada"],
-    correta: 0
-  },
-  {
-    dica: "Ajudo a separar materiais para que possam ganhar uma nova vida. O que sou?",
-    opcoes: ["Reciclagem", "Desperdício", "Poluição"],
-    correta: 0
-  }
-];
-
-let adivinhaAtual = 0;
-let adivinhaRespondida = false;
-
-function mostrarAdivinha() {
-  const item = adivinhas[adivinhaAtual % adivinhas.length];
-  document.getElementById("adivinha-pergunta").textContent = item.dica;
-  document.getElementById("adivinha-feedback").textContent = "";
-  document.getElementById("adivinha-feedback").className = "feedback";
-  adivinhaRespondida = false;
-
-  const area = document.getElementById("adivinha-opcoes");
-  area.innerHTML = "";
-
-  item.opcoes.forEach((opcao, i) => {
-    const botao = document.createElement("button");
-    botao.className = "opcao";
-    botao.textContent = opcao;
-
-    botao.onclick = () => {
-      if (adivinhaRespondida) return;
-      adivinhaRespondida = true;
-
-      area.querySelectorAll("button").forEach((b, indice) => {
-        b.disabled = true;
-        if (indice === item.correta) b.classList.add("correta");
-      });
-
-      if (i !== item.correta) botao.classList.add("errada");
-      registrarResposta(i === item.correta, "adivinha-feedback");
-    };
-
-    area.appendChild(botao);
-  });
-}
-
-function proximaAdivinha() {
-  adivinhaAtual++;
-  mostrarAdivinha();
-}
-
+/* Reinicia a pontuação e a roleta */
 function reiniciar() {
   pontos = 0;
-  acertos = 0;
-  jogados = 0;
-  quizAtual = 0;
-  lixoAtual = 0;
-  vfAtual = 0;
-  adivinhaAtual = 0;
+  desafioAtual = null;
+  roletaGirando = false;
+  rotacaoRoleta = 0;
+
+  const roleta = document.getElementById("roleta-circulo");
+  const texto = document.getElementById("texto-desafio");
+  const botaoGirar = document.getElementById("botao-girar");
+  const botaoConcluir = document.getElementById("botao-concluir");
+
+  if (roleta) roleta.style.transform = "rotate(0deg)";
+
+  if (texto) {
+    texto.textContent =
+      "Clique no botão para sortear seu desafio!";
+  }
+
+  if (botaoGirar) {
+    botaoGirar.disabled = false;
+    botaoGirar.textContent = "🎡 Girar a roleta";
+  }
+
+  if (botaoConcluir) {
+    botaoConcluir.style.display = "none";
+  }
 
   atualizarPainel();
-  mostrarQuiz();
-  mostrarLixo();
-  mostrarVF();
-  mostrarAdivinha();
 
-  document.getElementById("jogos").scrollIntoView({ behavior: "smooth" });
+  /*
+    Se os jogos da Parte 1 tiverem uma função própria
+    de reinicialização, você pode conectá-la aqui.
+  */
 }
 
-mostrarQuiz();
-mostrarLixo();
-mostrarVF();
-mostrarAdivinha();
+/* Prepara a roleta ao carregar a página */
+prepararRoleta();
 atualizarPainel();
 </script>
-  <!-- ROLETA DE DESAFIOS SUSTENTÁVEIS -->
-<section class="roleta-secao" id="roleta">
-  <div class="titulo-secao">
-    <h2>🎡 Roleta de Desafios</h2>
-    <p>Gire a roleta e descubra uma atitude sustentável para praticar!</p>
-  </div>
-
-  <div class="roleta-card">
-    <div class="roleta-emoji">🌎</div>
-
-    <div class="roleta-circulo" id="roleta">
-      <span>🌱</span>
-    </div>
-
-    <h3 id="desafio-titulo">Seu próximo desafio espera por você!</h3>
-    <p id="desafio-texto">
-      Clique no botão para sortear uma missão sustentável.
-    </p>
-
-    <button class="btn" id="botao-roleta" onclick="girarRoleta()">
-      🎡 Girar a roleta
-    </button>
-
-    <p id="desafio-feedback" aria-live="polite"></p>
-
-    <button class="btn btn-concluir" id="botao-concluir"
-      onclick="concluirDesafio()" hidden>
-      ✅ Fiz esse desafio!
-    </button>
-
-    <p class="roleta-pontos">🌟 Cada desafio concluído vale 10 pontos!</p>
-  </div>
-</section>
 
 </body>
 </html>
