@@ -580,6 +580,39 @@ mostrarVF();
 mostrarAdivinha();
 atualizarPainel();
 </script>
+  <!-- ROLETA DE DESAFIOS SUSTENTÁVEIS -->
+<section class="roleta-secao" id="roleta">
+  <div class="titulo-secao">
+    <h2>🎡 Roleta de Desafios</h2>
+    <p>Gire a roleta e descubra uma atitude sustentável para praticar!</p>
+  </div>
+
+  <div class="roleta-card">
+    <div class="roleta-emoji">🌎</div>
+
+    <div class="roleta-circulo" id="roleta">
+      <span>🌱</span>
+    </div>
+
+    <h3 id="desafio-titulo">Seu próximo desafio espera por você!</h3>
+    <p id="desafio-texto">
+      Clique no botão para sortear uma missão sustentável.
+    </p>
+
+    <button class="btn" id="botao-roleta" onclick="girarRoleta()">
+      🎡 Girar a roleta
+    </button>
+
+    <p id="desafio-feedback" aria-live="polite"></p>
+
+    <button class="btn btn-concluir" id="botao-concluir"
+      onclick="concluirDesafio()" hidden>
+      ✅ Fiz esse desafio!
+    </button>
+
+    <p class="roleta-pontos">🌟 Cada desafio concluído vale 10 pontos!</p>
+  </div>
+</section>
 
 </body>
 </html>
