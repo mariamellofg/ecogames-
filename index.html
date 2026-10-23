@@ -4,17 +4,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#fff8ec">
+<meta name="theme-color" content="#4B5320">
 <title>EcoGames 🌱</title>
 
 <style>
 :root {
-  --vinho: #812536;
-  --texto: #50392f;
-  --dourado: #d9ad50;
-  --creme: #fff8ec;
-  --bege: #f2e4ca;
-  --verde: #639b72;
+  --vinho: #4B5320;
+  --texto: #30351D;
+  --dourado: #D4AF37;
+  --creme: #F7F6ED;
+  --bege: #E7E8D8;
+  --verde: #65733B;
 }
 
 * { box-sizing: border-box; }
@@ -74,7 +74,7 @@ button {
   padding: 12px 17px;
   margin: 5px 2px;
   background: var(--dourado);
-  color: #492b26;
+  color: #30351D;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
@@ -90,7 +90,7 @@ button:disabled {
   max-width: 700px;
   margin: auto;
   padding: 24px;
-  border: 1px solid #f0dfc2;
+  border: 1px solid #D4D5BD;
   border-radius: 24px;
   background: white;
 }
@@ -116,7 +116,7 @@ button:disabled {
   color: var(--vinho);
 }
 
-.jogos { background: #f7edda; }
+.jogos { background: #EDEEDC; }
 
 .grade-jogos {
   display: grid;
@@ -130,7 +130,7 @@ button:disabled {
 .jogo {
   padding: 20px;
   min-width: 0;
-  border: 1px solid #ead9bd;
+  border: 1px solid #D4D5BD;
   border-radius: 20px;
   background: white;
 }
@@ -145,7 +145,7 @@ button:disabled {
 .opcoes button {
   width: 100%;
   margin: 0;
-  background: #f3e6cf;
+  background: #E7E8D8;
   text-align: left;
 }
 
@@ -155,16 +155,16 @@ button:disabled {
   overflow-wrap: anywhere;
 }
 
-.certo { color: #267343; }
-.errado { color: #a32936; }
+.certo { color: #386641; }
+.errado { color: #A32936; }
 
 .campo {
   width: 100%;
   padding: 12px;
-  border: 1px solid #d9c5a6;
+  border: 1px solid #A8AA8A;
   border-radius: 12px;
   font-size: 1rem;
-  background: #fffdf8;
+  background: #FFFDF8;
 }
 
 .roleta-secao {
@@ -192,25 +192,25 @@ button:disabled {
   max-height: 100%;
   aspect-ratio: 1;
   border-radius: 50%;
-  border: 6px solid #fff8e9;
+  border: 6px solid #F7F6ED;
   position: relative;
   overflow: hidden;
   flex-shrink: 0;
   transition: transform 3.5s cubic-bezier(.15,.65,.15,1);
-  box-shadow: 0 5px 18px #462d1e33;
+  box-shadow: 0 5px 18px #30351D33;
   background: conic-gradient(
-    #8fbc8f 0deg 30deg,
-    #e8c46a 30deg 60deg,
-    #b8d8be 60deg 90deg,
-    #f0d9a0 90deg 120deg,
-    #6fa77b 120deg 150deg,
-    #f5e6bd 150deg 180deg,
-    #9ac7a5 180deg 210deg,
-    #d8b65c 210deg 240deg,
-    #7fb58a 240deg 270deg,
-    #e8cf8a 270deg 300deg,
-    #a8d5ad 300deg 330deg,
-    #d4b46a 330deg 360deg
+    #65733B 0deg 30deg,
+    #D4AF37 30deg 60deg,
+    #A8B17A 60deg 90deg,
+    #E5D28B 90deg 120deg,
+    #4B5320 120deg 150deg,
+    #F0E6BE 150deg 180deg,
+    #89985C 180deg 210deg,
+    #C3A13B 210deg 240deg,
+    #7D8B4B 240deg 270deg,
+    #E8D79D 270deg 300deg,
+    #A8B17A 300deg 330deg,
+    #D4AF37 330deg 360deg
   );
 }
 
@@ -506,7 +506,7 @@ function responderQuiz(i) {
 
   document.querySelectorAll("#quiz-opcoes button").forEach((b, j) => {
     b.disabled = true;
-    if (j === p.correta) b.style.background = "#cce8cf";
+    if (j === p.correta) b.style.background = "#DCE5C7";
   });
 
   document.getElementById("quiz-proximo").hidden = false;
@@ -695,9 +695,9 @@ const desafios = [
 ];
 
 const cores = [
-  "#8fbc8f", "#e8c46a", "#b8d8be", "#f0d9a0",
-  "#6fa77b", "#f5e6bd", "#9ac7a5", "#d8b65c",
-  "#7fb58a", "#e8cf8a", "#a8d5ad", "#d4b46a"
+  "#65733B", "#D4AF37", "#A8B17A", "#E5D28B",
+  "#4B5320", "#F0E6BE", "#89985C", "#C3A13B",
+  "#7D8B4B", "#E8D79D", "#A8B17A", "#D4AF37"
 ];
 
 document.getElementById("roleta-circulo").style.background =
